@@ -9,7 +9,7 @@ public class Enemyspawner : MonoBehaviour
     private float[] arrPosx = {-7f, -5f, -3f, -1f, 1f, 3f, 5f, 7f};
 
     [SerializeField]
-    private float SpawnInterval = 1.5f;
+    private float SpawnInterval = 2f;
     // Start is called before the first frame update
     void Start()
     {   
@@ -21,12 +21,18 @@ public class Enemyspawner : MonoBehaviour
     }
 
     IEnumerator EnemyRoutine() {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         // 적 무한 생성 반복
         while (true){ 
+            // 같은 곳에서의 중복 생성 확인
+            int[] flag = {0, 0, 0, 0, 0, 0, 0, 0, 0};
             // 최소 3개에서 최대 6개의 적 생성
-            for (int i = 0; i < Random.Range(3, 7); i++){
+            for (int i = 0; i < Random.Range(2, 7); i++){
                 int posx = Random.Range(0, arrPosx.Length);
+                while (flag[posx] == 1){
+                    posx = Random.Range(0, arrPosx.Length);
+                }
+                flag[posx] = 1;
                 int index = Random.Range(0, enemies.Length);
                 SpawnEnemy(arrPosx[posx], index);
             }
