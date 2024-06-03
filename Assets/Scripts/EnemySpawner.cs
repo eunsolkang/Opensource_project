@@ -22,12 +22,13 @@ public class Enemyspawner : MonoBehaviour
 
     IEnumerator EnemyRoutine() {
         yield return new WaitForSeconds(3f);
-
+        // 적 무한 생성 반복
         while (true){ 
-            for (int i = 0; i < Random.Range(0, 8); i++){
-                float posx = Random.Range(0, arrPosx.Length);
+            // 최소 3개에서 최대 6개의 적 생성
+            for (int i = 0; i < Random.Range(3, 7); i++){
+                int posx = Random.Range(0, arrPosx.Length);
                 int index = Random.Range(0, enemies.Length);
-                SpawnEnemy(posx, index);
+                SpawnEnemy(arrPosx[posx], index);
             }
 
             yield return new WaitForSeconds(SpawnInterval);
