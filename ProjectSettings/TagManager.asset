@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Coin
+  - Oil
+  - Canvas
   layers:
   - Default
   - TransparentFX
