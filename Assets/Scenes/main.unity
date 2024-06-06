@@ -528,6 +528,7 @@ MonoBehaviour:
   coinScore: 500
   enemyDmg: 0.1
   enemyDownScore: 250
+  alarmText: {fileID: 108424779446745554, guid: 0a6cc05e76494434e8fc50246283ca03, type: 3}
 --- !u!1 &1174143108
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9, y: 0.782}
+  m_AnchoredPosition: {x: 2.9, y: 0.78200006}
   m_SizeDelta: {x: 11.179, y: 2.042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955961485
