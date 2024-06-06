@@ -12,9 +12,14 @@ public class Mole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
-        if (transform.position.y > maxY){
-            Destroy(gameObject);
+        if (!GameManager.Game_Over)
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+            if (transform.position.y > maxY)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 }

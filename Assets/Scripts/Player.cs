@@ -11,9 +11,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        Vector3 moveTo = new Vector3(horizontalInput, 0f, 0f);
-        transform.position += moveTo * speed * Time.deltaTime;
+        if(!GameManager.Game_Over)
+        {
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            Vector3 moveTo = new Vector3(horizontalInput, 0f, 0f);
+            transform.position += moveTo * speed * Time.deltaTime;
+        }
     }
 
     
