@@ -28,7 +28,7 @@ public class Battery_UI : MonoBehaviour
 
     private IEnumerator BatteryDown()
     {
-        while (true)
+        while (!GameManager.Game_Over)
         {
             if (battery_meter_value > 1) battery_meter_value = 1;
             battery_meter_value -= downAmount;
