@@ -209,9 +209,6 @@ GameObject:
   - component: {fileID: 150043691}
   m_Layer: 0
   m_Name: GameManager
-  - component: {fileID: 141900600}
-  m_Layer: 0
-  m_Name: TrailTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,6 +390,68 @@ MonoBehaviour:
   - {fileID: 4952501761517843183, guid: e70bf48fb13f5944e8231e338a0ce8f5, type: 3}
   - {fileID: 4952501761517843183, guid: e8b079d839a8ddc4e950d3c8a0a77686, type: 3}
   SpawnInterval: 1.5
+--- !u!1 &296821020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296821021}
+  m_Layer: 0
+  m_Name: Trails
+  m_TagString: Trail
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296821021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296821020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &341665417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341665418}
+  m_Layer: 0
+  m_Name: Obstacles
+  m_TagString: Obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341665418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341665417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06619573, y: -0.31506273, z: 0.04814806}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663291207
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   Trail: {fileID: 4952501761517843183, guid: 261ea08fc7391fb4a87c07eeeac068ba, type: 3}
-  TrailTransform: {fileID: 141900600}
+  TrailTransform: {fileID: 663291210}
 --- !u!212 &663291209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -493,8 +552,7 @@ Transform:
   m_LocalPosition: {x: -0.35, y: 2.97, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 141900600}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &663291211
@@ -1228,3 +1286,5 @@ SceneRoots:
   - {fileID: 260981007}
   - {fileID: 2061039579}
   - {fileID: 150043692}
+  - {fileID: 296821021}
+  - {fileID: 341665418}

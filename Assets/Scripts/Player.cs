@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     }
 
     void TrailRoutine(){
-        Instantiate(Trail, TrailTransform.position, Quaternion.identity);
+        Instantiate(Trail, TrailTransform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Trail").transform);
     }
     
 }
