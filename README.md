@@ -1,3 +1,7 @@
+# Demo Version
+
+[Demo Version](https://digging-23a84.web.app/)
+
 # How to Play
 
 [한국어 버전](./README_KOREAN.md)
