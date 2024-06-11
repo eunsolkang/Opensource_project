@@ -228,6 +228,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 2
   resultScreen: {fileID: 7716232671269070474, guid: 713c0e4f87ed19d448b5ef100b3b6de8, type: 3}
+  player: {fileID: 663291207}
+  battery: {fileID: 1174143108}
+  scoreboard: {fileID: 2122787026}
+  spawner: {fileID: 260981006}
 --- !u!4 &150043692
 Transform:
   m_ObjectHideFlags: 0
@@ -356,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &260981007
 Transform:
   m_ObjectHideFlags: 0
@@ -473,7 +477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &663291208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174143109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1188,7 +1192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2122787027
 RectTransform:
   m_ObjectHideFlags: 0

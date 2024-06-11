@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
@@ -11,15 +12,33 @@ public class ResultManager : MonoBehaviour
     public float speed;
     public int dif;
 
-    public TMP_Text scoretext;
+    public TMP_Text mainText, subText1, subText2;
     private bool moveFinished = false;
+
+    public string[] StartText, OverText;
+
     private void Awake()
     {
         targetPos = Vector3.zero;
     }
     void Start()
     {
-        scoretext.text = "Score: " + ((int)score_UI.score).ToString();
+        moveFinished = false;
+
+        if (GameManager.Game_Over)
+        {
+            mainText.text = OverText[0];
+            subText1.text = "Score: " + ((int)score_UI.score).ToString();
+            subText2.text = OverText[1];
+        }
+
+        else
+        {
+            mainText.text = StartText[0];
+            subText1.text = " ";
+            subText2.text = StartText[1];
+        }
+        
     }
 
     void Update()
@@ -33,7 +52,6 @@ public class ResultManager : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) && moveFinished)
         {
-           
            StartCoroutine(Reset());
         }
          
@@ -44,8 +62,20 @@ public class ResultManager : MonoBehaviour
         yield return StartCoroutine(moveDown());
         score_UI.score = 0;
         Battery_UI.battery_meter_value = 1;
-        GameManager.Game_Over = false;
-        SceneManager.LoadScene("main");
+
+        if (GameManager.Game_Over)
+        {
+            GameManager.Game_Over = false;
+            SceneManager.LoadScene("main");
+        }
+
+        else
+        {
+            GameManager.Game_Start = true;
+            Destroy(gameObject);
+        }
+            
+        
     }
 
     private IEnumerator moveDown()

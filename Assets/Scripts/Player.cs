@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     void Update()
     {
     
-        if(!GameManager.Game_Over)
+        if(!GameManager.Game_Over && GameManager.Game_Start)
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             Vector3 moveTo = new Vector3(horizontalInput, 0f, 0f);

@@ -7,7 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager.Game_Over)
+        if(!GameManager.Game_Over && GameManager.Game_Start)
                transform.position += Vector3.up * GameManager.speed * Time.deltaTime;
 
     }
