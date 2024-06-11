@@ -19,7 +19,7 @@ public class ResultManager : MonoBehaviour
     }
     void Start()
     {
-        scoretext.text = "Score: " + score_UI.score.ToString();
+        scoretext.text = "Score: " + ((int)score_UI.score).ToString();
     }
 
     void Update()

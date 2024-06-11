@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
+    public static bool hit_rock;
+
     public float oilAddValue;
     public int coinScore;
     public float enemyDmg;
@@ -18,6 +20,7 @@ public class CollisionManager : MonoBehaviour
     {
        alarmText_text = alarmText.GetComponent<TMP_Text>();
        playerPosition = gameObject.transform.position;
+        hit_rock = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,11 +42,27 @@ public class CollisionManager : MonoBehaviour
 
             else if (collision.tag == "Enemy")
             {
-                Battery_UI.battery_meter_value -= enemyDmg;
+                GameManager.Game_Over = true;
+            }
+
+            else if (collision.tag == "Water" || collision.tag == "Rock")
+            {
                 //Debug.Log(Battery_UI.battery_meter_value);
                 score_UI.score -= enemyDownScore;
                 AlarmTextShow("-" + enemyDownScore.ToString(), true);
+
+                if (collision.tag == "Water")
+                {
+                    Battery_UI.battery_meter_value -= enemyDmg;
+                }
+
+                else if (collision.tag == "Rock")
+                {
+                    hit_rock = true;
+                }
+
                 Destroy(collision.gameObject);
+
             }
         }
     }
