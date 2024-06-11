@@ -7,7 +7,9 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager.Game_Over && GameManager.Game_Start)
+        // 게임오버되지 않을 시
+        if(!GameManager.Game_Over)
+                // 맵은 계속해서 위로 이동
                transform.position += Vector3.up * GameManager.speed * Time.deltaTime;
 
     }
