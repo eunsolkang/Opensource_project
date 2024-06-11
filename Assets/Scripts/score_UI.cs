@@ -8,17 +8,13 @@ public class score_UI : MonoBehaviour
 {
 
     public static float score = 0;
-    private float speed;
     public float multiplier;
 
     public TMP_Text scoreText;
 
-    public Player digger;
-
     private void Awake()
     {
         score = 0;
-        speed = digger.speed;
     }
     void Start()
     {
@@ -30,8 +26,8 @@ public class score_UI : MonoBehaviour
     {
         while (!GameManager.Game_Over)
         {
-            score += (speed*multiplier);
-            scoreText.text = score.ToString();
+            score += (GameManager.speed*multiplier);
+            scoreText.text = ((int)score).ToString();
             yield return new WaitForSeconds(0.1f);
         }
         

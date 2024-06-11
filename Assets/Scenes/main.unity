@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0316a252380484548a3adec045e49fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: 2
   resultScreen: {fileID: 7716232671269070474, guid: 713c0e4f87ed19d448b5ef100b3b6de8, type: 3}
 --- !u!4 &150043692
 Transform:
@@ -485,7 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eedbd38fcc322428c85c6e2e00d759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   Trail: {fileID: 4952501761517843183, guid: 261ea08fc7391fb4a87c07eeeac068ba, type: 3}
   TrailTransform: {fileID: 663291210}
 --- !u!212 &663291209
@@ -1275,7 +1275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 10
   scoreText: {fileID: 1955961485}
-  digger: {fileID: 663291208}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

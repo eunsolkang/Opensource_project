@@ -21,6 +21,11 @@ public class Battery_UI : MonoBehaviour
         StartCoroutine(BatteryDown());
     }
 
+    private void Update()
+    {
+        if (battery_meter_value < 0) GameManager.Game_Over = true;
+    }
+
     private IEnumerator BatteryDown()
     {
         while (true)

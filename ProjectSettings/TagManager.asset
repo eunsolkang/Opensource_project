@@ -10,6 +10,8 @@ TagManager:
   - Canvas
   - Trail
   - Obstacle
+  - Water
+  - Rock
   layers:
   - Default
   - TransparentFX
