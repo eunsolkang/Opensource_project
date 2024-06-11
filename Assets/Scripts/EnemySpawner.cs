@@ -23,7 +23,7 @@ public class Enemyspawner : MonoBehaviour
     IEnumerator EnemyRoutine() {
         yield return new WaitForSeconds(2f);
         // 적 무한 생성 반복
-        while (true){ 
+        while (!GameManager.Game_Over){ 
             // 같은 곳에서의 중복 생성 확인
             int[] flag = {0, 0, 0, 0, 0, 0, 0, 0, 0};
             // 최소 3개에서 최대 6개의 적 생성

@@ -28,7 +28,7 @@ public class score_UI : MonoBehaviour
 
     private IEnumerator scoreAdd()
     {
-        while (true)
+        while (!GameManager.Game_Over)
         {
             score += (speed*multiplier);
             scoreText.text = score.ToString();

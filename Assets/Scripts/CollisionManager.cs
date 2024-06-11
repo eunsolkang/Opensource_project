@@ -21,26 +21,30 @@ public class CollisionManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Oil")
+        if (!GameManager.Game_Over)
         {
-            Battery_UI.battery_meter_value += oilAddValue;
-            Destroy(collision.gameObject);
+            if (collision.tag == "Oil")
+            {
+                Battery_UI.battery_meter_value += oilAddValue;
+                Destroy(collision.gameObject);
 
-        }
+            }
 
-        else if (collision.tag == "Coin")
-        {
-            score_UI.score += coinScore;
-            AlarmTextShow("+"+coinScore.ToString(),false);
-            Destroy(collision.gameObject);
-        }
+            else if (collision.tag == "Coin")
+            {
+                score_UI.score += coinScore;
+                AlarmTextShow("+" + coinScore.ToString(), false);
+                Destroy(collision.gameObject);
+            }
 
-        else if (collision.tag == "Enemy")
-        {
-            Battery_UI.battery_meter_value -= enemyDmg;
-            score_UI.score -= enemyDownScore;
-            AlarmTextShow("-"+enemyDownScore.ToString(), true);
-            Destroy(collision.gameObject);
+            else if (collision.tag == "Enemy")
+            {
+                Battery_UI.battery_meter_value -= enemyDmg;
+                //Debug.Log(Battery_UI.battery_meter_value);
+                score_UI.score -= enemyDownScore;
+                AlarmTextShow("-" + enemyDownScore.ToString(), true);
+                Destroy(collision.gameObject);
+            }
         }
     }
 
