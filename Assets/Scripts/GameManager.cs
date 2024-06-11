@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static bool Game_Over;
     public static bool Game_Start;
     private bool flag = false;
-    private bool enabled = false;
+    private bool object_enabled = false;
 
     public static float speed;
     public float multiplier;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         flag = false;
-        enabled = false;
+        object_enabled = false;
         speed = 3f;
 
         if (!Game_Start)
@@ -41,13 +41,13 @@ public class GameManager : MonoBehaviour
         if (CollisionManager.hit_rock)
             StartCoroutine(slowDown());
 
-        if (Game_Start && !enabled)
+        if (Game_Start && !object_enabled)
         {
             enabled = true;
-            player.active = true;
-            battery.active = true;
-            scoreboard.active = true;
-            spawner.active = true;
+            player.SetActive(true);
+            battery.SetActive(true);
+            scoreboard.SetActive(true);
+            spawner.SetActive(true);
         }
             
     }
