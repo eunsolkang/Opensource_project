@@ -209,6 +209,9 @@ GameObject:
   - component: {fileID: 150043691}
   m_Layer: 0
   m_Name: GameManager
+  - component: {fileID: 141900600}
+  m_Layer: 0
+  m_Name: TrailTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,6 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  Trail: {fileID: 4952501761517843183, guid: 261ea08fc7391fb4a87c07eeeac068ba, type: 3}
+  TrailTransform: {fileID: 141900600}
 --- !u!212 &663291209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +493,8 @@ Transform:
   m_LocalPosition: {x: -0.35, y: 2.97, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 141900600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &663291211
@@ -610,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 174.62, y: -38.899994}
+  m_AnchoredPosition: {x: 174.62, y: -38.900024}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1174143110
