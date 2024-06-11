@@ -9,6 +9,7 @@ TagManager:
   - Oil
   - Canvas
   - Trail
+  - Obstacle
   layers:
   - Default
   - TransparentFX

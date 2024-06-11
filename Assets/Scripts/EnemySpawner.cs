@@ -44,6 +44,6 @@ public class Enemyspawner : MonoBehaviour
     void SpawnEnemy(float posx, int index)
     {
         Vector3 spawnPos = new Vector3(posx, transform.position.y, transform.position.z);
-        Instantiate(enemies[index], spawnPos, Quaternion.identity);
+        Instantiate(enemies[index], spawnPos, Quaternion.identity, GameObject.FindGameObjectWithTag("Obstacle").transform);
     }
 }
